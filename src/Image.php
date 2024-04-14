@@ -1,6 +1,6 @@
 <?php
 
-namespace SimpleSoftwareIO\QrCode;
+namespace Mabeyrou\QrCode;
 
 class Image
 {

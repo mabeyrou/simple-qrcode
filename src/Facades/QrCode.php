@@ -1,9 +1,9 @@
 <?php
 
-namespace SimpleSoftwareIO\QrCode\Facades;
+namespace Mabeyrou\QrCode\Facades;
 
 use Illuminate\Support\Facades\Facade;
-use SimpleSoftwareIO\QrCode\Generator;
+use Mabeyrou\QrCode\Generator;
 
 class QrCode extends Facade
 {

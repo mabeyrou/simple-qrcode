@@ -1,6 +1,6 @@
 <?php
 
-namespace SimpleSoftwareIO\QrCode\DataTypes;
+namespace Mabeyrou\QrCode\DataTypes;
 
 class WiFi implements DataTypeInterface
 {
@@ -76,16 +76,16 @@ class WiFi implements DataTypeInterface
         $wifi = $this->prefix;
 
         if (isset($this->encryption)) {
-            $wifi .= 'T:'.$this->encryption.$this->separator;
+            $wifi .= 'T:' . $this->encryption . $this->separator;
         }
         if (isset($this->ssid)) {
-            $wifi .= 'S:'.$this->ssid.$this->separator;
+            $wifi .= 'S:' . $this->ssid . $this->separator;
         }
         if (isset($this->password)) {
-            $wifi .= 'P:'.$this->password.$this->separator;
+            $wifi .= 'P:' . $this->password . $this->separator;
         }
         if (isset($this->hidden)) {
-            $wifi .= 'H:'.$this->hidden.$this->separator;
+            $wifi .= 'H:' . $this->hidden . $this->separator;
         }
 
         return $wifi;

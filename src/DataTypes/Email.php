@@ -1,6 +1,6 @@
 <?php
 
-namespace SimpleSoftwareIO\QrCode\DataTypes;
+namespace Mabeyrou\QrCode\DataTypes;
 
 use BaconQrCode\Exception\InvalidArgumentException;
 
@@ -61,14 +61,14 @@ class Email implements DataTypeInterface
      */
     protected function buildEmailString()
     {
-        $email = $this->prefix.$this->email;
+        $email = $this->prefix . $this->email;
 
         if (isset($this->subject) || isset($this->body)) {
             $data = [
                 'subject' => $this->subject,
                 'body'    => $this->body,
             ];
-            $email .= '?'.http_build_query($data);
+            $email .= '?' . http_build_query($data);
         }
 
         return $email;
@@ -113,7 +113,7 @@ class Email implements DataTypeInterface
      */
     protected function isValidEmail($email)
     {
-        if (! filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
             throw new InvalidArgumentException('Invalid email provided');
         }
 

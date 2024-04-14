@@ -1,6 +1,6 @@
 <?php
 
-namespace SimpleSoftwareIO\QrCode\DataTypes;
+namespace Mabeyrou\QrCode\DataTypes;
 
 class PhoneNumber implements DataTypeInterface
 {
@@ -35,6 +35,6 @@ class PhoneNumber implements DataTypeInterface
      */
     public function __toString()
     {
-        return $this->prefix.$this->phoneNumber;
+        return $this->prefix . $this->phoneNumber;
     }
 }
