@@ -1,8 +1,8 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use SimpleSoftwareIO\QrCode\Image;
-use SimpleSoftwareIO\QrCode\ImageMerge;
+use Mabeyrou\QrCode\Image;
+use Mabeyrou\QrCode\ImageMerge;
 
 class ImageMergeTest extends TestCase
 {
@@ -42,15 +42,15 @@ class ImageMergeTest extends TestCase
 
     public function setUp(): void
     {
-        $this->testImagePath = file_get_contents(dirname(__FILE__).'/Images/simplesoftware-icon-grey-blue.png');
-        $this->mergeImagePath = file_get_contents(dirname(__FILE__).'/Images/200x300.png');
+        $this->testImagePath = file_get_contents(dirname(__FILE__) . '/Images/simplesoftware-icon-grey-blue.png');
+        $this->mergeImagePath = file_get_contents(dirname(__FILE__) . '/Images/200x300.png');
         $this->testImage = new ImageMerge(
             new Image($this->testImagePath),
             new Image($this->mergeImagePath)
         );
 
-        $this->testImageSaveLocation = dirname(__FILE__).'/testImage.png';
-        $this->compareTestSaveLocation = dirname(__FILE__).'/compareImage.png';
+        $this->testImageSaveLocation = dirname(__FILE__) . '/testImage.png';
+        $this->compareTestSaveLocation = dirname(__FILE__) . '/compareImage.png';
     }
 
     public function tearDown(): void

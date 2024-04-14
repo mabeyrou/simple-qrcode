@@ -1,6 +1,6 @@
 <?php
 
-namespace SimpleSoftwareIO\QrCode\DataTypes;
+namespace Mabeyrou\QrCode\DataTypes;
 
 interface DataTypeInterface
 {
